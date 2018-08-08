@@ -7,10 +7,10 @@ def home():
     return render_template("home_1.html")
 
 
-@app.route('/student/<int:student_id>')
-def display_student_id(student_id):
+@app.route('/student/<int:student_id>/<string:student_name>')
+def display_student_id(student_id,student_name):
     return render_template(
-        'student_id_1.html', student_id = student_id)
+        'student_id_1.html', student_id = student_id,student_name=student_name)
 
 
 
